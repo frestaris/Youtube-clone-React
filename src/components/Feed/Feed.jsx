@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import "./Feed.css";
-import { value_converter } from "../../data";
 import { Link } from "react-router-dom";
-import { API_KEY } from "../../data";
+import { API_KEY, value_converter } from "../../data";
 
 const Feed = ({ category }) => {
+  // const value_converter = (x) => {
+  //   if (x >= 1000000) {
+  //     return Math.floor(x / 1000000) + "M";
+  //   } else if (x >= 1000) {
+  //     return Math.floor(x / 1000) + "K";
+  //   } else {
+  //     return x;
+  //   }
+  // };
   const [data, setData] = useState([]);
 
   const fetchData = async () => {

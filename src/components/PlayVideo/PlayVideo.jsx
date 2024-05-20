@@ -9,6 +9,16 @@ import moment from "moment";
 import { useParams } from "react-router-dom";
 
 const PlayVideo = () => {
+  // const value_converter = (x) => {
+  //   if (x >= 1000000) {
+  //     return Math.floor(x / 1000000) + "M";
+  //   } else if (x >= 1000) {
+  //     return Math.floor(x / 1000) + "K";
+  //   } else {
+  //     return x;
+  //   }
+  // };
+
   const { videoId } = useParams();
   const [apiData, setApiData] = useState(null);
   const [channelData, setChannelData] = useState(null);
